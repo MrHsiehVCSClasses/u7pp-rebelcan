@@ -1,6 +1,7 @@
 package u7pp;
 
 //factorial of 0 will always be 1 but besides that it's just basic math lol
+//multiple current number with number less than one
 public class RecursiveFunctions {
     public static double factorial(int n) {
         if (n == 0) {
@@ -9,6 +10,7 @@ public class RecursiveFunctions {
             return n * factorial(n - 1);
         }
     }
+//use power function from math to multiply base with base raised to a power lower than the original
     public static double pow(double base, int power) {
         if (power == 0) {
             return 1;
@@ -16,6 +18,7 @@ public class RecursiveFunctions {
             return base * pow(base, power - 1);
         }
     }
+//if number is 1, then no fibonacci sequence. makes sure number is increasing at an increment of 1 while being added to the number right before it.
     public static int fibonacci(int n) {
         if (n == 0) {
             return 0;
@@ -25,7 +28,7 @@ public class RecursiveFunctions {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
-    //checks whether or not the first character of the 
+//checks whether or not the first character of the word matches the one at the end of the string
     public static boolean isPalindrome(String str) {
         if (str.length() <= 1) {
             return true;
@@ -36,6 +39,7 @@ public class RecursiveFunctions {
             return isPalindrome(subStr);
         }
     }
+    //checks if the next number in line is double of the original number 
     public static int nextIsDouble(int[] arr, int index) {
         if (index >= arr.length - 1) {
             return 0;
@@ -52,6 +56,7 @@ public class RecursiveFunctions {
             return getBinary(num / 2) + Integer.toString(num % 2);
         }
     }
+    //checks whether the number is in the middle
     public static int binarySearch(int[] arr, int value, int left, int right) {
         if (left > right) {
             return -1;
